@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お天気検索アプリ</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='wethermap.css') }}">
+</head>
+<body class="{{ main_weather }}">
+    <div class="weather-card">
+       <h1>お天気検索</h1>
+        
+        <form action="/" method="POST" style="margin-bottom: 20px;">
+            <input type="text" name="city_name" placeholder="都市名を英語で入力 (例: London)" required 
+                   style="padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+            <button type="submit" style="padding: 10px 20px; border-radius: 5px; cursor: pointer; background-color: #007bff; color: white; border: none;">
+                検索
+            </button>
+        </form>
+
+        <hr>
+
+        {% if city %}
+            {% if city == "見つかりませんでした" %}
+                <p style="color: red;">その都市は見つかりませんでした。綴りを確認してください。</p>
+            {% else %}
+                <h1>{{ city }} の天気</h1>
+                <img src="{{ icon_url }}" alt="天気アイコン">
+                <p>天気: {{ weather }}</p>
+                <p>気温: {{ temp }} ℃</p>
+                <p>湿度: {{ humidity }} %</p>
+            {% endif %}
+        {% endif %}
+    </div>
+<body>
+</html>

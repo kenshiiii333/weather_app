@@ -1,0 +1,104 @@
+/* ===== 全体設定 ===== */
+body {
+font-family: "Segoe UI", Arial, sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+
+```
+/* デフォルト背景 */
+background: linear-gradient(to top, #74ebd5, #acb6e5);
+```
+
+}
+
+/* ===== 天気ごとの背景 ===== */
+body.Clear {
+background: linear-gradient(to top, #56ccf2, #2f80ed);
+}
+
+body.Clouds {
+background: linear-gradient(to top, #bdc3c7, #2c3e50);
+}
+
+body.Rain {
+background: linear-gradient(to top, #4b79a1, #283e51);
+}
+
+body.Snow {
+background: linear-gradient(to top, #e6dada, #274046);
+}
+
+body.Thunderstorm {
+background: linear-gradient(to top, #232526, #414345);
+}
+
+/* ===== カード ===== */
+.weather-card {
+background: rgba(255, 255, 255, 0.9);
+padding: 30px;
+border-radius: 20px;
+box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+text-align: center;
+width: 320px;
+
+```
+/* ガラス風 */
+backdrop-filter: blur(10px);
+```
+
+}
+
+/* ===== タイトル ===== */
+.weather-card h1 {
+margin-bottom: 15px;
+}
+
+/* ===== アイコン ===== */
+.weather-card img {
+width: 100px;
+}
+
+/* ===== 気温（強調） ===== */
+.temp {
+font-size: 32px;
+font-weight: bold;
+margin: 10px 0;
+}
+
+/* ===== その他テキスト ===== */
+.weather-card p {
+font-size: 18px;
+margin: 8px 0;
+}
+
+/* ===== フォーム ===== */
+form input {
+padding: 10px;
+border-radius: 8px;
+border: 1px solid #ccc;
+width: 70%;
+margin-bottom: 10px;
+}
+
+form button {
+padding: 10px 20px;
+border-radius: 8px;
+cursor: pointer;
+background-color: #007bff;
+color: white;
+border: none;
+transition: 0.3s;
+}
+
+/* ホバー効果 */
+form button:hover {
+background-color: #0056b3;
+}
+
+/* ===== 区切り線 ===== */
+hr {
+margin: 20px 0;
+}
