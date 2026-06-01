@@ -7,9 +7,7 @@ from deep_translator import GoogleTranslator
 app = Flask(__name__)
 
 # OpenWeatherMap APIキー
-API_KEY = "0f0ad71ace673342488d7f02af25c565"
-
-
+from config import API_KEY
 
 
 @app.route("/", methods=["GET", "POST"])
